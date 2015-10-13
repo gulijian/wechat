@@ -4714,6 +4714,3 @@ html .ui-popup .ui-field-contain > label + .ui-flipswitch {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
 	padding: .2em;
 }
-
-
-.title-index{background: black;color: white;font-size: 24px;text-align: center;}
