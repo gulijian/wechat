@@ -82,10 +82,10 @@ public class MenuManager {
 //		btn13.setType("click");
 //		btn13.setKey("13");
 		
-		CommonButton btn14 = new CommonButton();
+		ViewButton btn14 = new ViewButton();
 		btn14.setName("主页");
-		btn14.setType("click");
-		btn14.setKey("14");
+		btn14.setType("view");
+		btn14.setUrl("http://gulj123.6655.la/ssmwechat/index.jsp");
 		
 		
 
