@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.home.entity.SideBar">
+
+<!-- 	<resultMap type="LoginUser" id="LoginUserMap"> -->
+<!-- 		<id 	property="id" column="ID"/> -->
+<!-- 		<result property="username" column="USER_NAME" jdbcType="VARCHAR"/> -->
+<!-- 		<result property="password" column="PASSWORD"  jdbcType="VARCHAR"/> -->
+<!-- 		<result property="address"  column="ADDRESS"   jdbcType="VARCHAR"/> -->
+<!-- 		<result property="mobile"   column="MOBILE"    jdbcType="VARCHAR"/> -->
+<!-- 	</resultMap> -->
+
+	
+	<select id="querySidebar" resultType="SideBar">
+		select id id,url  url,name name, parent_id  parentid,parent_order parentOrder,icoclass icoclass from tb_menu order by id asc             
+	</select>
+	
+	
+
+</mapper>

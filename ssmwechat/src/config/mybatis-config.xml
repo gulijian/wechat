@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- development 开发模式 work 工作模式 id 和 default 值必须相同 -->
+<configuration>
+	<properties>
+		<!-- 优先级别高于外部的properties文件中的属性 -->
+		<property name="dialect" value="oracle"/>
+	</properties>
+	
+	<!-- 全局参数的设置 -->
+	<settings>
+		<setting name="lazyLoadingEnabled" value="false" />
+		<setting name="cacheEnabled" value="true" />
+	</settings>
+
+    <!-- 类型处理器：typeHandlers   用来处理java类型和jdbc类型的转换 -->
+
+
+	<!-- 别名 -->
+	<typeAliases>
+		<typeAlias alias="LoginUser" type="com.my.weixin.entity.LoginUser"/>
+		<typeAlias alias="SideBar" type="com.my.weixin.entity.SideBar"/>
+		
+		<!-- 批量别名 ;别名就是类型，首字母大小写都可以-->
+		<!-- <package name="com.my.home.entity"/> -->
+	</typeAliases>
+	
+	<!-- 映射sql文件和接口 -->
+	<mappers>
+		<mapper resource="com/my/weixin/entity/LoginUser.xml"/>
+		<mapper resource="com/my/weixin/entity/SideBar.xml"/>
+	</mappers>
+	
+</configuration>
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.home.entity.LoginUser">
+
+<!-- 	<resultMap type="LoginUser" id="LoginUserMap"> -->
+<!-- 		<id 	property="id" column="ID"/> -->
+<!-- 		<result property="username" column="USER_NAME" jdbcType="VARCHAR"/> -->
+<!-- 		<result property="password" column="PASSWORD"  jdbcType="VARCHAR"/> -->
+<!-- 		<result property="address"  column="ADDRESS"   jdbcType="VARCHAR"/> -->
+<!-- 		<result property="mobile"   column="MOBILE"    jdbcType="VARCHAR"/> -->
+<!-- 	</resultMap> -->
+
+	<!-- 查询用户根据手机号码 -->
+	<select id="queryLoginUserByMobile" parameterType="String" resultType="LoginUser">
+		select * from s_user where mobile=#{mobile}
+	</select>
+	
+	<!-- 插入单个用户 -->
+	<insert id="addLoginUser" parameterType="LoginUser" >
+		insert into s_user(id,username,password,address,mobile) values(#{id},#{username},#{password},#{address},#{mobile})
+	</insert>
+
+</mapper>
