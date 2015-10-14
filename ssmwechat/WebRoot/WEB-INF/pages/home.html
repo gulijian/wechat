@@ -17,6 +17,14 @@
 
   <div data-role="header">
     <h1>欢迎来到我的主页</h1>
+    /*
+	   SELECT DISTINCT t1.url,t1.model,t1.method from tz_permission t1 
+		LEFT JOIN tz_role_permission t2 on t1.id = t2.permission_id
+		LEFT JOIN tz_role t3 on t3.id = t2.role_id
+		LEFT JOIN tz_user_role t4 on t4.role_id = t3.id
+		LEFT JOIN tz_user t5 on t5.id = t4.user_id
+		where t5.id = 1
+	 */
   </div>
 
   <div data-role="main" class="ui-content">
