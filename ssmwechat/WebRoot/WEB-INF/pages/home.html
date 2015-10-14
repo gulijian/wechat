@@ -1,49 +1,218 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>个人主页</title>
+<head>
+<title>个人主页</title>
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css"type="text/css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"></link>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+<style type="text/css">
+	/*jquery mobile settings start*/
+	*{
+		text-shadow:none; /*解决字体加粗*/
+	}
+	.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a{
+		text-decoration:none;
+		color:none;
+	}
 	
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="this is my page">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" href="../../css/jquery.mobile-1.4.5.css" type="text/css"/>
-	<script type="text/javascript" src="../../js/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="../../js/jquery.mobile-1.4.5.js"></script>    
+	.ui-footer .ui-title{
+		min-height: 1.0em;
+	}
+	.ui-header,.ui-footer {
+ 		 border-style: none;
+	}
+	.ui-content {
+	  padding-left: 0.5em;
+	  background:url("images/homebg.jpg") no-repeat;
+	}
+	.ui-bar-f
+	{
+		color:white;
+		background-color:rgb(40, 55, 69);
+	}
+	.ui-bar-ge
+	{
+		background-color:rgb(40, 55, 69);
+		height:53px;
+		padding:0px;
+		
+	}
+	
+	/*jquery mobile settings end*/
+	
 
-  </head>
-  
-  <body>
-  	<div data-role="page">
+	.c_menu_box{
+		width:100%;
+		height:450px;
+		margin-top:-10px;
+		margin-left:5px;
+	}
+	.c_menu_box .c_menu_left{
+		width:49%;
+		height:100%;
+		float:left;
+		
+	}
+	.c_menu_box .c_menu_right{
+		width:49%;
+		height:100%;
+		float:right;
+	}
+	
+	.c_menu_box .c_menu_left .c_menu_left_top{
+		height:120px;
+		background:#00B4FF;
+	}
+	.c_menu_box .c_menu_left .c_menu_left_middle{
+		height:120px;
+		background:#00B4FF;
+		margin-top:-5px;
+	}
+	.c_menu_box .c_menu_left .c_menu_left_bottom{
+		height:120px;
+		background:#00B4FF;
+		margin-top:-5px;
+	}
+	
+	.c_menu_box .c_menu_right .c_menu_right_top{
+		height:120px;
+		background:#00B4FF;
+	}
+	.c_menu_box .c_menu_right .c_menu_right_middle{
+		height:120px;
+		background:#00B4FF;
+		margin-top:-5px;
+	}
+	.c_menu_box .c_menu_right .c_menu_right_bottom{
+		height:120px;
+		background:#00B4FF;
+		margin-top:-5px;
+	}
+	
+	.c_menu_box .c_menu_left p,.c_menu_box .c_menu_right p{
+		margin-left:-100px;
+	}
+	.c_menu_box .c_menu_left,.c_menu_box .c_menu_right{
+		text-align:center;
+	}
+	.f_nav{
+			margin-top:-26px;
+			margin-left:-40px;
+			
+	}
+	.f_nav ul{
+		list-style:none;
+	}
+	.f_nav ul li{
+		width:25%;
+		height:100%;
+		float:left;
+		text-align:center;
+		line-height:100%;
+		
+	}
+	.f_nav ul li a{
+		text-decoration:none;
+		color:white;
+		
+	}
+	.f_nav ul li a span {
+		display:block;
+	}
+	
 
-  <div data-role="header">
-    <h1>欢迎来到我的主页</h1>
-    /*
-	   SELECT DISTINCT t1.url,t1.model,t1.method from tz_permission t1 
-		LEFT JOIN tz_role_permission t2 on t1.id = t2.permission_id
-		LEFT JOIN tz_role t3 on t3.id = t2.role_id
-		LEFT JOIN tz_user_role t4 on t4.role_id = t3.id
-		LEFT JOIN tz_user t5 on t5.id = t4.user_id
-		where t5.id = 1
-	 */
-  </div>
+</style>
+</head>
 
-  <div data-role="main" class="ui-content">
-    <p>我现在是一个移动端开发者!!</p>
-  </div>
+<body>
+	<div data-role="page">
+		<div data-role="header" data-theme="ge">
+			<h1>主菜单</h1>
+		</div>
+		<div data-role="content">
+			<div class="c_menu_box">
+				<div class="c_menu_left">
+					<div class="c_menu_left_top">
+						<a href="personal.html" data-transition="slide" data-direction="reverse">
+			 				<p>400管理</p>
+							<i class="fa  fa-cog fa-3x"></i>
+			 			</a>
+					</div>
+					<div class="c_menu_left_middle">
+						<a href="personal.html" data-transition="slide" data-direction="reverse">
+			 				<p>400管理</p>
+							<i class="fa  fa-cog fa-3x"></i>
+			 			</a>
+					</div>
+					<div class="c_menu_left_bottom">
+						<a href="personal.html" data-transition="slide" data-direction="reverse">
+			 				<p>400管理</p>
+							<i class="fa  fa-cog fa-3x"></i>
+			 			</a>
+					</div>
+				</div>
+				<div class="c_menu_right">
+					<div class="c_menu_right_top">
+						<a href="personal.html" data-transition="slide" data-direction="reverse">
+			 				<p>400管理</p>
+							<i class="fa  fa-cog fa-3x"></i>
+			 			</a>
+					</div>
+					<div class="c_menu_right_middle">
+						<a href="personal.html" data-transition="slide" data-direction="reverse">
+			 				<p>400管理</p>
+							<i class="fa  fa-cog fa-3x"></i>
+			 			</a>
+					</div>
+					<div class="c_menu_right_bottom">
+						<a href="personal.html" data-transition="slide" data-direction="reverse">
+			 				<p>400管理</p>
+							<i class="fa  fa-cog fa-3x"></i>
+			 			</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-theme="ge">
+			 <div class="f_nav">
+			 	<ul>
+			 		<li>
+			 			<a href="#pagetwo" data-transition="slide" data-direction="reverse">
+			 				<i class="fa  fa-cog fa-2x"></i>
+			 				<span>切换</span>
+			 			</a>
+			 		</li>
+			 		<li>
+			 			<a href="#pagetwo" data-transition="slide" data-direction="reverse">
+			 				<i class="fa  fa-cog fa-2x"></i>
+			 				<span>切换</span>
+			 			</a>
+			 		</li>
+			 		<li>
+			 			<a href="#pagetwo" data-transition="slide" data-direction="reverse">
+			 				<i class="fa  fa-cog fa-2x"></i>
+			 				<span>切换</span>
+			 			</a>
+			 		</li>
+			 		<li>
+			 			<a href="personal.html" data-transition="slide" data-direction="reverse">
+			 				<i class="fa  fa-cog fa-2x"></i>
+			 				<span>设置</span>
+			 			</a>
+			 		</li>
+			 	</ul>
+			 </div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
 
-  <div data-role="footer">
-    <h1>底部文本</h1>
-  </div>
-
-</div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </body>
+		});
+	</script>
+</body>
 </html>
