@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>个人中心</title>
+    <title>博客</title>
     <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
     <meta http-equiv="description" content="this is my page">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="../../css/jquery.mobile-1.4.5.css" type="text/css"></link>
-	<script type="text/javascript" src="../../js/jquery-1.8.2.min.js"></script>
-	<script type="text/javascript" src="../../js/jquery.mobile-1.4.5.js"></script>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" type="text/css"></link>
+	<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+	
+	<style type="text/css">
+		/*jquery mobile settings start*/
+		*{
+			text-shadow:none; /*解决字体加粗*/
+		}
+		.ui-page-theme-a a, html .ui-bar-a a, html .ui-body-a a, html body .ui-group-theme-a a{
+			text-decoration:none;
+			color:none;
+		}
+		
+		.ui-footer .ui-title{
+			min-height: 1.2em;
+		}
+		.ui-header{
+		  font-size:1.3em;
+		}
+		.ui-header,.ui-footer {
+	 		 border-style: none;
+		}
+		.ui-content {
+		  padding-left: 0.5em;
+		  background:url("images/homebg.jpg") no-repeat;
+		}
+		.ui-bar-f
+		{
+			color:white;
+			background-color:rgb(40, 55, 69);
+		}
+		.ui-bar-ge
+		{
+			background-color:rgb(172, 208, 244);
+			color:white;
+			padding:0px;
+			
+		}
+	/*jquery mobile settings end*/
+		.con_box{
+			width:100%;
+			height:435px;
+			margin-top:-10px;
+			margin-left:5px;
+		}
+	  .ui-icon-send-msg {background:url('images/crm.png') no-repeat 0 0;}
+	
+	</style>
   </head>
   <body>
 	   <div data-role="page" >
 		  <div data-role="header">
-		   	 <h1>页面标题</h1>
+		   	 <h1>博客</h1>
 		  </div>
 		
 		  <div data-role="content">
-		   	 <p>页面内容</p>
+		   	<div class="con_box">
+		   	
+		   	</div>
 		  </div>
 		
 		  <div data-role="footer">
-		    	<h1>页面底部内容</h1>
+		    	<div data-role="navbar">
+			      <ul>
+			        <li><a href="home.html" data-ajax="false" data-icon="send-msg" >首页</a></li>
+			        <li><a href="personal.html" class="ui-btn-active ui-state-persist" data-icon="minus">博客</a></li>
+			        <li><a href="#" data-icon="delete">个人中心</a></li>
+			      </ul>
+    		</div>
 		  </div>
 	  </div> 
 	  
    
 	<script type="text/javascript">
 		$(function(){
-		
-			alert("1111");
-		
-		
+			 
 		
 		});
 	</script>
