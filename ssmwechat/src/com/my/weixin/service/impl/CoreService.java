@@ -27,7 +27,7 @@ public class CoreService implements ICoreService {
 	 * 日志记录器
 	 */
 //	private static Logger log = Logger.getLogger(CoreService.class);
-
+	//http://guljwechat.sinaapp.com/getToken
 
 	/**
 	 * 处理短信发来的请求

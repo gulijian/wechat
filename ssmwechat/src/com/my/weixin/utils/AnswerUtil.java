@@ -50,7 +50,7 @@ public class AnswerUtil {
 		 Article article = new Article();
 		 article.setTitle("小Y快讯");
 		 article.setDescription(sb.toString());
-		 article.setPicUrl("http://guljweixin.sinaapp.com/images/titlePage.jpg");
+		 article.setPicUrl("http://gulj.nat123.net/ssmwechat/images/robot.jpg");
 		 article.setUrl("http://www.baidu.com");
 		 articleList.add(article);
 		return AnswerUtil.imgmessage(fromUserName, toUserName, articleList);
