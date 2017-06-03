@@ -1,1 +1,1 @@
-# ssmwechatrep
+# 微信订阅号基础源码（java版本）
